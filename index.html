@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Aeon</title>
+        <meta name="description" content="A simple bot that can be used for moderation purposes. It also includes useful utilities and other fun features.">
+        <meta name="theme-color" content="#3179bd">
+        <meta content="https://cdn.discordapp.com/avatars/635833307510079490/44800a772d1b4f7daf8f53597f538b65.png?size=256" property="og:image">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes, user-scalable=no">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+        <link rel="icon" type="image/png" href="https://avatars2.githubusercontent.com/u/51487578">
+		
+        <style>
+		/*
+		*
+		* Aeon
+		* © flazepe 2020
+		*
+		*/
+		
+        body {
+            font-family: 'Open Sans', Arial, Helvetica;
+			background-image: linear-gradient(to right, #d6dfff, transparent);
+			line-height: 1.5;
+			font-size: 25px;
+        }
+        
+        .container {
+            padding-top: 50px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        
+        @media only screen and (min-width: 868px) {
+            .container {
+                padding-left: 20vw;
+                padding-right: 20vw;
+            }
+			
+			.left-container { padding-right: 50%; }
+			.right-container { text-align: right; padding-left: 50%; }
+        }
+		
+		.center, .feature-box-container { text-align: center; }
+        
+        #logo {
+            display: block;
+            width: 128px;
+            margin-left: auto;
+            margin-right: auto; 
+        }
+        
+		#statistics {
+			display: inline-block;
+			
+			background-color: #fff;
+			
+			margin-top: 40px;
+			margin-left: auto;
+            margin-right: auto; 
+		}
+		
+		#statistics h2 {
+			display: inline-block;
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+		
+        .feature-box-container { display: block; margin-top: 10px; }
+        
+        .feature-box, #logo, .button, #statistics { box-shadow: grey 0 3px 10px -5px; border-radius: 5px; }
+        
+        .feature-box {
+            display: inline-block;
+            padding: 10px 20px;
+        	margin-bottom: 10px;
+        	background-color: #000;
+        	color: #fff;
+        	user-select: none;
+        	font-weight: 600;
+        }
+        
+        .feature-box::first-letter {
+        	font-size: 40px;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #000;
+            background-color: #fff;
+            transition: 0.2s;
+			-webkit-tap-highlight-color: transparent;
+        }
+        
+        .button:hover { background-color: #e9f1ff; }
+        
+		code { font-family: inherit; color: #e21919; }
+		
+		li { margin-bottom: 10px; }
+		
+		::selection { background-color: #fff; color: #000; }
+		</style>
+    </head>
+    <body>
+        <div class="container">
+            <img src="https://cdn.discordapp.com/avatars/635833307510079490/44800a772d1b4f7daf8f53597f538b65.png?size=256" alt="Aeon" id="logo">
+            <h1 style="font-size: 70px; margin: auto;" class="center">Aeon</h1>
+            <p class="center">Aeon is a Discord bot that is focused on simplicity. Despite it being minimalist, it offers various useful features that you can use on your servers.</p>
+			
+            <h1>Features</h1>
+            
+			<div class="left-container">
+				<div class="feature-box" style="background-image: linear-gradient(to right, darkred, red);">Moderation</div>
+				<p>Moderation features such as <code>purge</code>, <code>kick</code> and <code>ban</code> are available.</p>
+			</div>
+			
+			<div class="right-container">
+				<div class="feature-box" style="background-image: linear-gradient(to right, #45a1e2, #308092);">Language</div>
+				<p><code>Translator</code> and <code>Dictionary</code> are included.</p>
+			</div>
+			
+			<div class="left-container">
+				<div class="feature-box" style="background-image: linear-gradient(to right, orange , yellow); color: #000;">Fun</div>
+				<p>Variety of fun features such as <code>InspiroBot</code>, <code>xkcd</code>, and <code>GIF</code> are inside Aeon for you to have a good laugh.</p>
+			</div>
+			
+			<div class="right-container">
+				<div class="feature-box" style="background-image: linear-gradient(to right, #5f6696, #394b61);">Development</div>
+				<p>Development features such as <code>DNS</code> and <code>IP Lookup</code> exist for developers to use.</p>
+			</div>
+			
+			<!--
+			<div class="feature-box" style="background-image: linear-gradient(to right, black, gray);">Basic Logging</div>
+			<p>Create a channel called <code>logs</code> and Aeon will log:</p>
+			
+			<ul>
+				<li>Channels that were created or deleted.</li>
+				<li>Roles that were created or deleted.</li>
+				<li>Members that were banned or unbanned.</li>
+			</ul>
+			
+			<p>Make sure that the channel is accessible by the bot.</p>
+			-->
+			
+			<h3>Other features include:</h3>
+			
+			<div class="feature-box-container center">
+            	<div class="feature-box" style="background-image: linear-gradient(to right, #3dcc7c, #67841f);">Music<span style="position: absolute; margin-left: -16px; font-size: 13px; color: #ffd983;">beta</span></div>
+            	<div class="feature-box" style="background-image: linear-gradient(to right, brown, sandybrown);">Poll</div>
+            	<div class="feature-box" style="background-color: white; color: #000;">Wikipedia</div>
+				<div class="feature-box" style="background-image: linear-gradient(to right, #c6d4d6, #9cbbca); color: #000;">Steam</div>
+            	<div class="feature-box" style="background-image: linear-gradient(to right, pink, hotpink); color: #000;">Anime & Manga</div>
+            </div>
+            
+            <p class="center">...and more!</p>
+			
+			<div style="text-align: center;">
+				<div id="statistics">
+					<h2><code>15+</code> Servers</h2>
+					<h2><code>10000+</code> Users</h2>
+				</div>
+			</div>
+			
+            <div class="center">
+                <a class="button" href="invite">Invite Aeon</a>
+            </div>
+            
+            <footer style="margin-top: 50px; margin-bottom: 50px;">
+                <small title="2020">&copy; flazepe</small>
+            </footer>
+        </div>
+    </body>
+</html>
