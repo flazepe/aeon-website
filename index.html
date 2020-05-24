@@ -209,9 +209,8 @@
 				else {
 					let list = "";
 					
-					for (const i of Object.keys(voteLinks)) {
+					for (const i of Object.keys(voteLinks))
 						list += `<li><a title="Vote" href="${voteLinks[i].url}" target="_blank">Vote on ${voteLinks[i].name}</a></li>`;
-					}
 					
 					document.querySelector("#vote").innerHTML += list;
 				}
