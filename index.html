@@ -185,10 +185,40 @@
             
 			<h1>Support Aeon</h1>
 			
-			<ul>
-				<li><a title="Vote" href="https://top.gg/bot/635833307510079490/vote" target="_blank">Vote on Discord Bot List</a></li>
-				<!-- <li><a title="Vote" href="https://discord.boats/bot/635833307510079490/vote" target="_blank">Vote on Discord Boats</a></li> -->
-			</ul>
+			<script>
+			const voteLinks = {
+				"dbl": {
+					name: "Discord Bot List",
+					url: "https://top.gg/bot/635833307510079490/vote"
+				},
+				"boats": {
+					name: "Discord Boats",
+					url: "https://discord.boats/bot/635833307510079490/vote"
+				}
+			};
+			
+			document.addEventListener("DOMContentLoaded", () => {
+				const parameters = new URLSearchParams(window.location.search);
+				const botList = parameters.get("ref");
+				
+				if (botList && voteLinks[botList]) {
+					const json = voteLinks[botList];
+					document.querySelector("#vote").innerHTML += `<li><a title="Vote" href="${json.url}" target="_blank">Vote on ${json.name}</a></li>`;
+				}
+				
+				else {
+					let list = "";
+					
+					for (const i of Object.keys(voteLinks)) {
+						list += `<li><a title="Vote" href="${voteLinks[i].url}" target="_blank">Vote on ${voteLinks[i].name}</a></li>`;
+					}
+					
+					document.querySelector("#vote").innerHTML += list;
+				}
+			});
+			</script>
+			
+			<ul id="vote"></ul>
 			
             <footer style="margin-top: 50px; margin-bottom: 50px;">
                 <small title="2020" style="font-size: 15px; color: #aaa;">&copy; flazepe</small>
