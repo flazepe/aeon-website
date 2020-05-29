@@ -42,6 +42,7 @@
             }
 			
 			.cool-box-wrapper { display: flex; }
+			.cool-box-container { margin: 0 10px; }
         }
 		
 		@media only screen and (min-width: 2280px) {
@@ -76,7 +77,7 @@
 		}
 		
         .cool-box, #logo, .button, #statistics { box-shadow: grey 0 3px 10px -5px; border-radius: 5px; }
-        .cool-box-container { width: 100%; margin: 0 10px; }
+        .cool-box-container { display: inline; width: 100%; }
 		
         .cool-box {
             padding: 15px;
@@ -201,13 +202,32 @@
 			
 			<h2>Other commands include:</h2>
 			
-			<div class="cool-box-container">
-            	<div class="cool-box" style="background-image: linear-gradient(to right, #5f7fc7, #7a6daf);"><i class="fa fa-music"></i>Music<span class="beta">beta</span></div>
-            	<div class="cool-box" style="background-image: linear-gradient(to right, #3dcc7c, #67841f);"><i class="fa fa-money"></i>Economy<span class="beta">beta</span></div>
-				<div class="cool-box" style="background-image: linear-gradient(to right, brown, sandybrown);"><i class="fa fa-list-ol"></i>Poll</div>
-            	<div class="cool-box" style="background-color: white; color: #000;"><i class="fa fa-wikipedia-w"></i>Wikipedia</div>
-				<div class="cool-box" style="background-image: linear-gradient(to right, #c6d4d6, #9cbbca); color: #000;"><i class="fa fa-steam"></i>Steam</div>
-            	<div class="cool-box" style="background-image: linear-gradient(to right, pink, hotpink); color: #000;"><i class="fa fa-picture-o"></i>Anime & Manga</div>
+			<div class="cool-box-wrapper">
+				<div class="cool-box-container">
+					<div class="cool-box" style="background-image: linear-gradient(to right, #5f7fc7, #7a6daf);"><i class="fa fa-music"></i>Music<span class="beta">beta</span></div>
+            	</div>
+				
+				<div class="cool-box-container">
+					<div class="cool-box" style="background-image: linear-gradient(to right, #3dcc7c, #67841f);"><i class="fa fa-money"></i>Economy<span class="beta">beta</span></div>
+            	</div>
+				
+				<div class="cool-box-container">
+					<div class="cool-box" style="background-image: linear-gradient(to right, brown, sandybrown);"><i class="fa fa-list-ol"></i>Poll</div>
+            	</div>
+			</div>
+			
+			<div class="cool-box-wrapper">
+				<div class="cool-box-container">
+					<div class="cool-box" style="background-color: white; color: #000;"><i class="fa fa-wikipedia-w"></i>Wikipedia</div>
+            	</div>
+				
+				<div class="cool-box-container">
+					<div class="cool-box" style="background-image: linear-gradient(to right, pink, hotpink); color: #000;"><i class="fa fa-picture-o"></i>Anime & Manga</div>
+            	</div>
+				
+				<div class="cool-box-container">
+					<div class="cool-box" style="background-image: linear-gradient(to right, #c6d4d6, #9cbbca); color: #000;"><i class="fa fa-steam"></i>Steam</div>
+            	</div>
 			</div>
             
             <p class="center">...and more!</p>
