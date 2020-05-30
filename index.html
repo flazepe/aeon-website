@@ -22,7 +22,8 @@
 		
         body {
             font-family: 'Open Sans', Arial, Helvetica;
-			background-image: linear-gradient(to right, #d6dfff, transparent);
+			background-color: #111;
+			color: #e6e6e6;
 			line-height: 1.5;
 			font-size: 25px;
         }
@@ -67,7 +68,7 @@
         
 		#statistics {
 			display: inline-block;
-			background-color: #fff;
+			background-color: #232323;
 			margin-top: 40px;
 		}
 		
@@ -76,22 +77,21 @@
 			margin: 20px;
 		}
 		
-        .cool-box, #logo, .button, #statistics { box-shadow: grey 0 3px 10px -5px; border-radius: 5px; }
+        .cool-box, #logo, .button, #statistics { box-shadow: #000 0 3px 10px -5px; border-radius: 5px; }
         .cool-box-container { display: inline; width: 100%; }
 		
         .cool-box {
             padding: 15px;
 			margin-bottom: 10px;
         	background-color: #000;
-        	color: #fff;
         	user-select: none;
         	font-weight: 600;
         }
 		
 		.beta {
+			display: flex;
 			position: absolute;
-			margin-top: -9px;
-			margin-left: -16px;
+			margin-top: -50px;
 			font-size: 13px;
 			color: #ffd983;
 		}
@@ -107,16 +107,18 @@
             font-size: 25px;
             border-radius: 5px;
             text-decoration: none;
-            color: #000;
-            background-color: #fff;
+            color: #fff;
+            background-color: #3a3a3a;
             transition: 0.2s;
 			-webkit-tap-highlight-color: transparent;
         }
         
-        .button:hover { background-color: #e9f1ff; }
+        .button:hover { color: #fff; background-color: #4a4a4a; }
         
-		a { color: #0000ff; text-decoration: none; }
-		code { font-family: inherit; color: #e21919; }
+		a { color: #c4c4f3; text-decoration: none; transition: 0.2s; }
+		a:hover { color: #9090d0; }
+		
+		code { color: #ffb5b5; font-family: inherit; }
 		li { margin-bottom: 5px; }
 		::selection { background-color: #fff; color: #000; }
 		</style>
@@ -136,17 +138,17 @@
             
 			<div class="cool-box-wrapper">
 				<div class="cool-box-container">
-					<div class="cool-box" style="background-color: #000;"><i class="fa fa-check"></i>Simple</div>
+					<div class="cool-box" style="background-color: #3a3a3a;"><i class="fa fa-check"></i>Simple</div>
 					<p>Aeon does not need any configuration.</p>
 				</div>
 				
 				<div class="cool-box-container">
-					<div class="cool-box" style="background-color: #000;"><i class="fa fa-list"></i>Consistent</div>
+					<div class="cool-box" style="background-color: #3a3a3a;"><i class="fa fa-list"></i>Consistent</div>
 					<p>Aeon utilizes Discord's embed on all commands with simplicity in mind.</p>
 				</div>
 				
 				<div class="cool-box-container">
-					<div class="cool-box" style="background-color: #000;"><i class="fa fa-fire"></i>Quick</div>
+					<div class="cool-box" style="background-color: #3a3a3a;"><i class="fa fa-fire"></i>Quick</div>
 					<p>Aeon is blazingly fast when it comes to responses.</p>
 				</div>
 			</div>
@@ -155,17 +157,17 @@
             
 			<div class="cool-box-wrapper">
 				<div class="cool-box-container">
-					<div class="cool-box" style="background-image: linear-gradient(to right, darkred, red);">Moderation</div>
+					<div class="cool-box" style="background-image: linear-gradient(to right, #b12222, #a74e4e);">Moderation</div>
 					<p>Moderation commands such as <code>Purge</code>, <code>Kick</code> and <code>Ban</code>.</p>
 				</div>
 				
 				<div class="cool-box-container">
-					<div class="cool-box" style="background-image: linear-gradient(to right, #45a1e2, #308092);">Utility</div>
+					<div class="cool-box" style="background-image: linear-gradient(to right, #317cb1, #308092);">Utility</div>
 					<p>Utilities such as <code>Google (Assistant)</code>, <code>Translator</code>, <code>Dictionary</code>, and more.</p>
 				</div>
 				
 				<div class="cool-box-container">
-					<div class="cool-box" style="background-image: linear-gradient(to right, orange , yellow); color: #000;">Fun</div>
+					<div class="cool-box" style="background-image: linear-gradient(to right, #a57f3a , #b1b12d);">Fun</div>
 					<p>Variety of fun commands such as <code>InspiroBot</code>, <code>xkcd</code>, and <code>GIF</code>.</p>
 				</div>
 			</div>
@@ -177,12 +179,12 @@
 				</div>
 				
 				<div class="cool-box-container">
-					<div class="cool-box" style="background-image: linear-gradient(to right, #b39646, #ffb263);">Image Generation</div>
+					<div class="cool-box" style="background-image: linear-gradient(to right, #7d6b3b, #8e765d);">Image Generation</div>
 					<p>Over <code>50</code> image generation commands to pick from.</p>
 				</div>
 				
 				<div class="cool-box-container">
-					<div class="cool-box" style="background-image: linear-gradient(to right, #0043ff , #aba7ef); color: #fff;">NASA</div>
+					<div class="cool-box" style="background-image: linear-gradient(to right, #102b77 , #6e68d8); color: #fff;">NASA</div>
 					<p>NASA commands such as <code>APOD</code>, <code>Curiosity</code>, <code>Spirit</code>, and <code>Opportunity</code>.</p>
 				</div>
 			</div>
@@ -204,29 +206,29 @@
 			
 			<div class="cool-box-wrapper">
 				<div class="cool-box-container">
-					<div class="cool-box" style="background-image: linear-gradient(to right, #5f7fc7, #7a6daf);"><i class="fa fa-music"></i>Music<span class="beta">beta</span></div>
+					<div class="cool-box" style="background-image: linear-gradient(to right, #655b90, #8376bb);"><i class="fa fa-music"></i>Music<span class="beta">beta</span></div>
             	</div>
 				
 				<div class="cool-box-container">
-					<div class="cool-box" style="background-image: linear-gradient(to right, #3dcc7c, #67841f);"><i class="fa fa-money"></i>Economy<span class="beta">beta</span></div>
+					<div class="cool-box" style="background-image: linear-gradient(to right, #276f47, #5f9c45);"><i class="fa fa-money"></i>Economy<span class="beta">beta</span></div>
             	</div>
 				
 				<div class="cool-box-container">
-					<div class="cool-box" style="background-image: linear-gradient(to right, brown, sandybrown);"><i class="fa fa-list-ol"></i>Poll</div>
+					<div class="cool-box" style="background-image: linear-gradient(to right, #a06c2b, #71441e);"><i class="fa fa-list-ol"></i>Poll</div>
             	</div>
 			</div>
 			
 			<div class="cool-box-wrapper">
 				<div class="cool-box-container">
-					<div class="cool-box" style="background-color: white; color: #000;"><i class="fa fa-wikipedia-w"></i>Wikipedia</div>
+					<div class="cool-box" style="background-color: #e6e6e6; color: #000;"><i class="fa fa-wikipedia-w"></i>Wikipedia</div>
             	</div>
 				
 				<div class="cool-box-container">
-					<div class="cool-box" style="background-image: linear-gradient(to right, pink, hotpink); color: #000;"><i class="fa fa-picture-o"></i>Anime & Manga</div>
+					<div class="cool-box" style="background-image: linear-gradient(to right, #985f6a, #d67ca9);"><i class="fa fa-picture-o"></i>Anime & Manga</div>
             	</div>
 				
 				<div class="cool-box-container">
-					<div class="cool-box" style="background-image: linear-gradient(to right, #c6d4d6, #9cbbca); color: #000;"><i class="fa fa-steam"></i>Steam</div>
+					<div class="cool-box" style="background-image: linear-gradient(to right, #2f6d75, #6b8694);"><i class="fa fa-steam"></i>Steam</div>
             	</div>
 			</div>
             
@@ -240,7 +242,7 @@
 			</div>
 			
             <div class="center">
-                <a title="Invite" class="button" href="invite">Invite Aeon</a>
+                <a title="Invite" class="button" href="invite"><i class="fa fa-plus"></i>Invite Aeon</a>
             </div>
             
 			<h1>Support Aeon</h1>
