@@ -139,17 +139,17 @@
             
 			<div class="cool-box-wrapper">
 				<div class="cool-box-container">
-					<div class="cool-box" style="background-color: #232323;"><i class="fa fa-check"></i>Simple</div>
+					<div class="cool-box" style="background-color: #232323;"><i class="fa fa-check" style="color: #b2ffb2;"></i>Simple</div>
 					<p>Aeon does not need any configuration.</p>
 				</div>
 				
 				<div class="cool-box-container">
-					<div class="cool-box" style="background-color: #232323;"><i class="fa fa-list"></i>Consistent</div>
+					<div class="cool-box" style="background-color: #232323;"><i class="fa fa-list" style="color: #c7c7ff;"></i>Consistent</div>
 					<p>Aeon utilizes Discord's embed on all commands with simplicity in mind.</p>
 				</div>
 				
 				<div class="cool-box-container">
-					<div class="cool-box" style="background-color: #232323;"><i class="fa fa-fire"></i>Quick</div>
+					<div class="cool-box" style="background-color: #232323;"><i class="fa fa-fire" style="color: #f5a0a0;"></i>Quick</div>
 					<p>Aeon is blazingly fast when it comes to responses.</p>
 				</div>
 			</div>
@@ -248,43 +248,41 @@
             
 			<h1>Support Aeon</h1>
 			
-			<script>
-			const voteLinks = {
-				dbl: {
-					name: "Discord Bot List",
-					url: "https://top.gg/bot/635833307510079490/vote"
-				},
-				boats: {
-					name: "Discord Boats",
-					url: "https://discord.boats/bot/635833307510079490/vote"
-				}
-			};
-			
-			document.addEventListener("DOMContentLoaded", () => {
-				const parameters = new URLSearchParams(window.location.search);
-				const botList = parameters.get("ref");
-				
-				if (botList && voteLinks[botList]) {
-					const json = voteLinks[botList];
-					document.querySelector("#vote").innerHTML += `<li><a title="Vote" href="${json.url}" target="_blank">Vote on ${json.name}</a></li>`;
-				}
-				
-				else {
-					let list = "";
-					
-					for (const i of Object.keys(voteLinks))
-						list += `<li><a title="Vote" href="${voteLinks[i].url}" target="_blank">Vote on ${voteLinks[i].name}</a></li>`;
-					
-					document.querySelector("#vote").innerHTML += list;
-				}
-			});
-			</script>
-			
 			<ul id="vote"></ul>
 			
             <footer style="margin-top: 50px; margin-bottom: 50px;">
                 <small title="2020" style="font-size: 15px; color: #aaa;">&copy; flazepe</small>
             </footer>
         </div>
+		
+		<script>
+		const voteLinks = {
+			dbl: {
+				name: "Discord Bot List",
+				url: "https://top.gg/bot/635833307510079490/vote"
+			},
+			boats: {
+				name: "Discord Boats",
+				url: "https://discord.boats/bot/635833307510079490/vote"
+			}
+		};
+		
+		const parameters = new URLSearchParams(window.location.search);
+		const botList = parameters.get("ref");
+		
+		if (botList && voteLinks[botList]) {
+			const json = voteLinks[botList];
+			document.querySelector("#vote").innerHTML += `<li><a title="Vote" href="${json.url}" target="_blank">Vote on ${json.name}</a></li>`;
+		}
+		
+		else {
+			let list = "";
+			
+			for (const link of Object.keys(voteLinks))
+				list += `<li><a title="Vote" href="${voteLinks[link].url}" target="_blank">Vote on ${voteLinks[link].name}</a></li>`;
+			
+			document.querySelector("#vote").innerHTML += list;
+		}
+		</script>
     </body>
 </html>
