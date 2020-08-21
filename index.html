@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
     <head>
         <title>Aeon</title>
-		
-        <meta name="description" content="A simple bot that can be used for moderation purposes. It also includes useful utilities and other fun features.">
+        <meta name="description" content="A simple Discord bot that can be used for moderation purposes. It also includes useful utilities and other fun features.">
         <meta name="theme-color" content="#3179bd">
         <meta content="https://cdn.discordapp.com/avatars/635833307510079490/44800a772d1b4f7daf8f53597f538b65.png?size=256" property="og:image">
         
@@ -12,8 +11,7 @@
         <link rel="icon" type="image/png" href="https://avatars2.githubusercontent.com/u/51487578">
 		
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-		
-        <style>
+		<style>
 		/*
 		*
 		* Aeon by flazepe
@@ -21,7 +19,7 @@
 		*/
 		
         body {
-            font-family: 'Open Sans', Arial, Helvetica;
+            font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 			background-color: #111;
 			color: #e6e6e6;
 			line-height: 1.5;
@@ -96,14 +94,14 @@
         	font-weight: 600;
         }
 		
-		.beta {
-			display: flex;
-			position: absolute;
-			margin-top: -50px;
-			margin-left: -5px;
-			font-size: 13px;
-			color: #ffd983;
-		}
+		/*.beta {*/
+		/*	display: flex;*/
+		/*	position: absolute;*/
+		/*	margin-top: -50px;*/
+		/*	margin-left: -5px;*/
+		/*	font-size: 13px;*/
+		/*	color: #ffd983;*/
+		/*}*/
 		
 		.fa { margin-right: 10px; }
         
@@ -145,18 +143,18 @@
             
 			<div class="cool-box-wrapper">
 				<div class="cool-box-container">
-					<div class="cool-box" style="background-color: #232323;"><i class="fa fa-check" style="color: #b2ffb2;"></i>Simple</div>
-					<p>Aeon does not need any configuration.</p>
+					<div class="cool-box" style="background-color: #232323;"><i class="fa fa-check" style="color: #b2ffb2;"></i>Easy to Use</div>
+					<p>Aeon works right out of the box and does not need any configuration.</p>
 				</div>
 				
 				<div class="cool-box-container">
-					<div class="cool-box" style="background-color: #232323;"><i class="fa fa-list" style="color: #c7c7ff;"></i>Efficient</div>
-					<p>Aeon utilizes Discord's embed only on needed commands with simplicity in mind.</p>
+					<div class="cool-box" style="background-color: #232323;"><i class="fa fa-cogs" style="color: #c7c7ff;"></i>Efficient</div>
+					<p>Aeon utilizes Discord's embed with simplicity in mind, used only where it is needed.</p>
 				</div>
 				
 				<div class="cool-box-container">
 					<div class="cool-box" style="background-color: #232323;"><i class="fa fa-fire" style="color: #f5a0a0;"></i>Quick</div>
-					<p>Aeon is blazingly fast when it comes to responses.</p>
+					<p>Aeon is blazing fast when it comes to responding to commands.</p>
 				</div>
 			</div>
 			
@@ -175,19 +173,19 @@
 				
 				<div class="cool-box-container">
 					<div class="cool-box" style="background-image: linear-gradient(to right, #a57f3a , #b1b12d);"><i class="fa fa-smile-o"></i>Fun</div>
-					<p>Variety of fun commands such as <code>InspiroBot</code>, <code>xkcd</code>, and <code>GIF</code>.</p>
+					<p>Use <code>InspiroBot</code>, <code>xkcd</code>, and <code>GIF</code> commands to have fun with your server.</p>
 				</div>
 			</div>
 			
 			<div class="cool-box-wrapper">
 				<div class="cool-box-container">
 					<div class="cool-box" style="background-image: linear-gradient(to right, #5f6696, #394b61);"><i class="fa fa-code"></i>Development</div>
-					<p>Development commands such as <code>DNS</code> and <code>IP</code> Lookup, <code>Hastebin</code>, and <code>WHOIS</code>.</p>
+					<p>Development commands such as <code>DNS</code> and <code>IP</code> lookup, <code>Hastebin</code>, and <code>WHOIS</code>.</p>
 				</div>
 				
 				<div class="cool-box-container">
 					<div class="cool-box" style="background-image: linear-gradient(to right, #7d6b3b, #8e765d);"><i class="fa fa-image"></i>Image Generation</div>
-					<p>Over <code>90</code> image generation commands to pick from.</p>
+					<p>There are over <code>90</code> image generation commands to pick from.</p>
 				</div>
 				
 				<div class="cool-box-container">
@@ -199,12 +197,12 @@
 			<div class="cool-box-wrapper">
 				<div class="cool-box-container">
 					<div class="cool-box" style="background-color: #1ed760; color: #000;"><i class="fa fa-spotify"></i>Spotify</div>
-					<p>Spotify command for <code>song</code>, <code>album</code>, <code>artist</code>, <code>user</code> and, <code>member</code> (presence) lookup. Can also generates <code>cards for songs</code> and others.</p>
+					<p>You can get info on <code>songs</code>, <code>albums</code>, <code>artists</code>, <code>users</code> and <code>member presences</code>. This command also generate <code>cards for songs</code> and others.</p>
             	</div>
 				
 				<div class="cool-box-container">
 					<div class="cool-box" style="background-color: #f46b95; color: #000;"><i class="fa fa-apple"></i>iTunes</div>
-					<p>iTunes command for <code>song</code>, <code>album</code>, <code>artist</code>, <code>software</code>, <code>podcast</code> lookup, and more! Can also generates <code>cards for songs</code> and others.</p>
+					<p>You can get info on <code>songs</code>, <code>albums</code>, <code>artists</code>, <code>software</code>, <code>podcasts</code>, and more! Also generates <code>cards for songs</code> and others.</p>
             	</div>
 			</div>
 			<!-- Old
@@ -228,7 +226,7 @@
             	</div>
 				
 				<div class="cool-box-container">
-					<div class="cool-box" style="background-image: linear-gradient(to right, #a06c2b, #71441e);"><i class="fa fa-list-ol"></i>Poll</div>
+					<div class="cool-box" style="background-image: linear-gradient(to right, #a06c2b, #71441e);"><i class="fa fa-list-ol"></i>Polls</div>
             	</div>
 				
 				<div class="cool-box-container">
@@ -256,7 +254,7 @@
 				-->
 			</div>
             
-            <p class="center">...and more!</p>
+            <p class="center">...and much more!</p>
 			
 			<div style="text-align: center;">
 				<div id="statistics">
