@@ -3,7 +3,8 @@
     <head>
         <title>Aeon</title>
 		
-        <meta name="description" content="A simple bot that can be used for moderation purposes. It also includes useful utilities and other fun features.">
+		<!-- A simple bot that can be used for moderation purposes. It also includes useful utilities and other fun features. -->
+        <meta name="description" content="Your ultimate Discord bot with many utilities and API integrations.">
         <meta name="theme-color" content="#3179bd">
         <meta content="https://cdn.discordapp.com/avatars/635833307510079490/44800a772d1b4f7daf8f53597f538b65.png?size=256" property="og:image">
         
@@ -135,18 +136,14 @@
             <img src="https://cdn.discordapp.com/avatars/635833307510079490/44800a772d1b4f7daf8f53597f538b65.png?size=256" alt="Aeon" id="logo">
             <h1 style="font-size: 70px; margin: auto; margin-bottom: -30px;" class="center">Aeon</h1>
             
-			<!--
-			Aeon is a Discord bot that is focused on simplicity. Despite it being minimalist, it offers various useful features that you can use on your servers.
-			-->
-			
-			<p class="center">Your ultimate multi-purpose <a title="Discord" href="https://discord.com" target="_blank">Discord</a> bot with many utilities and API integrations.</p>
+			<p class="center">Your ultimate <a title="Discord" href="https://discord.com" target="_blank">Discord</a> bot with many utilities and API integrations.</p>
 			
 			<h1>Features</h1>
             
 			<div class="cool-box-wrapper">
 				<div class="cool-box-container">
 					<div class="cool-box" style="background-color: #232323;"><i class="fa fa-check" style="color: #b2ffb2;"></i>Simple</div>
-					<p>Aeon does not need any configuration.</p>
+					<p>Aeon works without any configuration.</p>
 				</div>
 				
 				<div class="cool-box-container">
@@ -238,6 +235,10 @@
 			
 			<div class="cool-box-wrapper">
 				<div class="cool-box-container">
+					<div class="cool-box" style="background-color: #2e51a2;"><i class="fa fa-list"></i>MyAnimeList</div>
+				</div>
+				
+				<div class="cool-box-container">
 					<div class="cool-box" style="background-color: #00aaff; color: #000;"><i class="fa fa-list"></i>AniList</div>
             	</div>
 				
@@ -260,8 +261,8 @@
 			
 			<div style="text-align: center;">
 				<div id="statistics">
-					<h2><code>75+</code> Servers</h2>
-					<h2><code>12060+</code> Users</h2>
+					<h2><code>90+</code> Servers</h2>
+					<h2><code>22967+</code> Users</h2>
 				</div>
 			</div>
 			
@@ -271,7 +272,9 @@
             
 			<h1>Support Aeon</h1>
 			
-			<ul id="vote"></ul>
+			<ul id="support">
+				<li><a href="https://paypal.me/flazepe" target="_blank">PayPal</a></li>
+			</ul>
 			
             <footer style="margin-top: 50px; margin-bottom: 50px;">
                 <small title="2020" style="font-size: 15px; color: #aaa;">&copy; flazepe</small>
@@ -297,19 +300,8 @@
 		const parameters = new URLSearchParams(window.location.search);
 		const botList = parameters.get("ref");
 		
-		if (botList && voteLinks[botList]) {
-			const json = voteLinks[botList];
-			document.querySelector("#vote").innerHTML += `<li><a title="Vote" href="${json.url}" target="_blank">Vote on ${json.name}</a></li>`;
-		}
-		
-		else {
-			let list = "";
-			
-			for (const link of Object.keys(voteLinks))
-				list += `<li><a title="Vote" href="${voteLinks[link].url}" target="_blank">Vote on ${voteLinks[link].name}</a></li>`;
-			
-			document.querySelector("#vote").innerHTML += list;
-		}
+		if (voteLinks[botList]) document.querySelector("#support").innerHTML += `<li><a title="Vote" href="${voteLinks[botList].url}" target="_blank">Vote on ${voteLinks[botList].name}</a></li>`;
+		else document.querySelector("#support").innerHTML += Object.keys(voteLinks).map(x => `<li><a title="Vote" href="${voteLinks[x].url}" target="_blank">Vote on ${voteLinks[x].name}</a></li>`).join("");
 		</script>
     </body>
 </html>
