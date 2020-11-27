@@ -2,69 +2,37 @@
 <html lang="en">
     <head>
         <title>Aeon</title>
-		<meta name="description" content="Your ultimate Discord bot with many utilities and API integrations.">
+        <meta name="description" content="Your ultimate Discord bot with many utilities and API integrations.">
         <meta name="theme-color" content="#3179bd">
         <meta content="https://cdn.discordapp.com/avatars/635833307510079490/b3480e1378cc1e402525be1056ffdc0a.png?size=256" property="og:image">
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes, user-scalable=no">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
-        <link rel="icon" type="image/png" href="https://avatars2.githubusercontent.com/u/51487578">
-		
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-		<style>
-		/*
-		*
-		* Aeon by flazepe
-		*
-		*/
-		
+        <link rel="icon" type="image/png" href="https://cdn.discordapp.com/avatars/635833307510079490/b3480e1378cc1e402525be1056ffdc0a.png?size=256">
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+        <style>
+        /*
+        *
+        * Aeon by flazepe
+        *
+        */
+        
         body {
+            background-color: #111;
+            color: #e6e6e6;
+            line-height: 1.5;
+            
             font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-			background-color: #111;
-			color: #e6e6e6;
-			line-height: 1.5;
-			font-size: 25px;
+            font-size: 25px;
         }
         
-		h1 { margin-bottom: 20px; }
-		
-		/* Containers */
         .container {
-			margin: auto;
+            margin: auto;
             max-width: 90%;
         }
         
-        @media only screen and (min-width: 1032px) {
-            .container { max-width: 60%; }
-			.cool-box-wrapper { display: flex; }
-			.cool-box-container { margin: 0 10px; }
-        }
-		
-		@media only screen and (min-width: 2000px) {
-            .container { max-width: 55%; }
-        }
-		
-		@media only screen and (min-width: 2200px) {
-            .container { max-width: 50%; }
-        }
-		
-		@media only screen and (min-width: 2400px) {
-            .container { max-width: 45%; }
-        }
-		
-		@media only screen and (min-width: 2600px) {
-            .container { max-width: 40%; }
-        }
-		
-		@media only screen and (min-width: 2800px) {
-            .container { max-width: 35%; }
-        }
-		
-		@media only screen and (min-width: 3000px) {
-            .container { max-width: 30%; }
-        }
-		
-		.center, .cool-box { text-align: center; }
+        .center, .box div { text-align: center; }
         
         #logo {
             display: block;
@@ -72,224 +40,205 @@
             margin: 50px auto 0;
         }
         
-		#statistics {
-			display: inline-block;
-			background-color: #232323;
-			margin-top: 40px;
-		}
-		
-		#statistics h2 {
-			display: inline-block;
-			margin: 20px;
-		}
-		
-        .cool-box, #logo, .button, #statistics { box-shadow: #000 0 3px 10px -5px; border-radius: 5px; }
-        .cool-box-container { width: 100%; }
-		
-        .cool-box {
-            padding: 15px;
-			margin-bottom: 10px;
-        	background-color: #000;
-        	user-select: none;
-        	font-weight: 600;
-        }
-		
-		.fa { margin-right: 10px; }
+        .box div, #logo, .button, #statistics { box-shadow: #000 0 3px 10px -5px; border-radius: 5px; }
         
+        .box { width: 100%; text-align: center; }
+        .box p { text-align: left; }
+        
+        .box img {
+            max-width: 90%;
+            background-color: #36393f;
+            border-radius: 7px;
+            padding: 7px;
+            margin-bottom: 30px;
+        }
+        
+        .box div {
+            padding: 15px;
+            margin-bottom: 10px;
+            background-color: #000;
+            user-select: none;
+            font-weight: 600;
+        }
+        
+        .fa { margin-right: 10px; }
+
         .button {
             display: inline-block;
-            padding: 10px;
+            padding: 15px;
             margin: 20px;
-            font-size: 25px;
             border-radius: 5px;
-            text-decoration: none;
             color: #fff;
             background-color: #232323;
             transition: 0.2s;
-			-webkit-tap-highlight-color: transparent;
+        }
+
+        .button:hover { color: #fff; background-color: #333333; }
+
+        a { color: #c4c4f3; text-decoration: none; transition: 0.2s; }
+        a:hover { color: #9090d0; }
+
+        code { color: #ffb5b5; font-family: inherit; }
+        li { margin-bottom: 5px; }
+        ::selection { background-color: #fff; color: #000; }
+        
+        /* Desktop */
+        @media only screen and (min-width: 1032px) {
+            .container { max-width: 70%; }
+            .box-wrapper { display: flex; }
+            .box { margin: 0 10px; }
         }
         
-        .button:hover { color: #fff; background-color: #333333; }
+        @media only screen and (min-width: 2000px) {
+            .container { max-width: 65%; }
+        }
         
-		a { color: #c4c4f3; text-decoration: none; transition: 0.2s; }
-		a:hover { color: #9090d0; }
-		
-		code { color: #ffb5b5; font-family: inherit; }
-		li { margin-bottom: 5px; }
-		::selection { background-color: #fff; color: #000; }
-		</style>
+        @media only screen and (min-width: 2200px) {
+            .container { max-width: 60%; }
+        }
+        
+        @media only screen and (min-width: 2400px) {
+            .container { max-width: 55%; }
+        }
+        
+        @media only screen and (min-width: 2600px) {
+            .container { max-width: 50%; }
+        }
+        
+        @media only screen and (min-width: 2800px) {
+            .container { max-width: 45%; }
+        }
+        
+        @media only screen and (min-width: 3000px) {
+            .container { max-width: 40%; }
+        }
+        </style>
     </head>
     <body>
         <div class="container">
             <img src="https://cdn.discordapp.com/avatars/635833307510079490/b3480e1378cc1e402525be1056ffdc0a.png?size=256" alt="Aeon" id="logo">
             <h1 style="font-size: 70px; margin: auto auto -30px;" class="center">Aeon</h1>
             
-			<p class="center">Your ultimate <a title="Discord" href="https://discord.com" target="_blank">Discord</a> bot with many utilities and API integrations.</p>
-			
-			<h1>Features</h1>
+            <p class="center">Your ultimate <a title="Discord" href="https://discord.com" target="_blank">Discord</a> bot with many utilities and API integrations.</p>
             
-			<div class="cool-box-wrapper">
-				<div class="cool-box-container">
-					<div class="cool-box" style="background-color: #232323;"><i class="fa fa-check" style="color: #b2ffb2;"></i>Easy to Use</div>
-					<p>Aeon works right out of the box and does not need any configuration.</p>
-				</div>
-				
-				<div class="cool-box-container">
-					<div class="cool-box" style="background-color: #232323;"><i class="fa fa-cogs" style="color: #c7c7ff;"></i>Efficient</div>
-					<p>Aeon utilizes Discord's embed with simplicity in mind, used only where it is needed.</p>
-				</div>
-				
-				<div class="cool-box-container">
-					<div class="cool-box" style="background-color: #232323;"><i class="fa fa-fire" style="color: #f5a0a0;"></i>Quick</div>
-					<p>Aeon is blazing fast when it comes to responding to commands.</p>
-				</div>
-			</div>
-			
-            <h1>Commands</h1>
+            <h1>Features</h1>
             
-			<div class="cool-box-wrapper">
-				<div class="cool-box-container">
-					<div class="cool-box" style="background-image: linear-gradient(to right, #b12222, #a74e4e);"><i class="fa fa-exclamation"></i>Moderation</div>
-					<p>Simple moderation commands such as <code>Purge</code>, <code>Kick</code>, and <code>Ban</code>.</p>
-				</div>
-				
-				<div class="cool-box-container">
-					<div class="cool-box" style="background-image: linear-gradient(to right, #317cb1, #308092);"><i class="fa fa-wrench"></i>Utility</div>
-					<p>Utilities such as <code>Google (Assistant)</code>, <code>Translator</code>, <code>Dictionary</code>, and more.</p>
-				</div>
-				
-				<div class="cool-box-container">
-					<div class="cool-box" style="background-image: linear-gradient(to right, #a57f3a , #b1b12d);"><i class="fa fa-smile-o"></i>Fun</div>
-					<p>Use <code>InspiroBot</code>, <code>xkcd</code>, and <code>GIF</code> commands to have fun with your server.</p>
-				</div>
-			</div>
-			
-			<div class="cool-box-wrapper">
-				<div class="cool-box-container">
-					<div class="cool-box" style="background-image: linear-gradient(to right, #5f6696, #394b61);"><i class="fa fa-code"></i>Development</div>
-					<p>Development commands such as <code>DNS</code> and <code>IP</code> lookup, <code>Hastebin</code>, and <code>WHOIS</code>.</p>
-				</div>
-				
-				<div class="cool-box-container">
-					<div class="cool-box" style="background-image: linear-gradient(to right, #7d6b3b, #8e765d);"><i class="fa fa-image"></i>Image Generation</div>
-					<p>There are over <code>90</code> image generation commands to pick from.</p>
-				</div>
-				
-				<div class="cool-box-container">
-					<div class="cool-box" style="background-image: linear-gradient(to right, #102b77 , #6e68d8); color: #fff;"><i class="fa fa-globe"></i>NASA</div>
-					<p>NASA commands such as <code>APOD</code>, <code>Curiosity</code>, <code>Spirit</code>, and <code>Opportunity</code>.</p>
-				</div>
-			</div>
-			
-			<div class="cool-box-wrapper">
-				<div class="cool-box-container">
-					<div class="cool-box" style="background-color: #1ed760; color: #000;"><i class="fa fa-spotify"></i>Spotify</div>
-					<p>You can get info on <code>songs</code>, <code>albums</code>, <code>artists</code>, <code>users</code>, and <code>member presences</code>. This command also generates <code>cards for songs and albums</code>.</p>
-            	</div>
-				
-				<div class="cool-box-container">
-					<div class="cool-box" style="background-color: #f46b95; color: #000;"><i class="fa fa-apple"></i>iTunes</div>
-					<p>You can get info on <code>songs</code>, <code>albums</code>, <code>artists</code>, <code>software</code>, <code>podcasts</code>, and more! Also generates <code>cards for songs and others</code>.</p>
-            	</div>
-			</div>
-			<!-- Old
-			<div class="cool-box" style="background-image: linear-gradient(to right, black, gray);">Basic Logging</div>
-			<p>Create a channel called <code>logs</code> and Aeon will log:</p>
-			
-			<ul>
-				<li>Channels that were created or deleted.</li>
-				<li>Roles that were created or deleted.</li>
-				<li>Members that were banned or unbanned.</li>
-			</ul>
-			
-			<p>Make sure that the channel is accessible by the bot.</p>
-			-->
-			
-			<h2>Other commands include:</h2>
-			
-			<div class="cool-box-wrapper">
-				<div class="cool-box-container">
-					<div class="cool-box" style="background-color: #e6e6e6; color: #000;"><i class="fa fa-wikipedia-w"></i>Wikipedia</div>
-            	</div>
-				
-				<div class="cool-box-container">
-					<div class="cool-box" style="background-image: linear-gradient(to right, #a06c2b, #71441e);"><i class="fa fa-list-ol"></i>Polls</div>
-            	</div>
-				
-				<div class="cool-box-container">
-					<div class="cool-box" style="background-color: #377096;"><i class="fa fa-steam"></i>Steam</div>
-            	</div>
-			</div>
-			
-			<div class="cool-box-wrapper">
-				<div class="cool-box-container">
-					<div class="cool-box" style="background-color: #2e51a2;"><i class="fa fa-list"></i>MyAnimeList</div>
-				</div>
-				
-				<div class="cool-box-container">
-					<div class="cool-box" style="background-color: #00aaff; color: #000;"><i class="fa fa-list"></i>AniList</div>
-            	</div>
-				
-				<div class="cool-box-container">
-					<div class="cool-box" style="background-image: linear-gradient(to right, #985f6a, #d67ca9);"><i class="fa fa-circle"></i>osu!</div>
-            	</div>
-				
-				<!-- Unavailable
-				<div class="cool-box-container">
-					<div class="cool-box" style="background-image: linear-gradient(to right, #655b90, #8376bb);"><i class="fa fa-music"></i>Music<span class="beta">beta</span></div>
-            	</div>
-				
-				<div class="cool-box-container">
-					<div class="cool-box" style="background-image: linear-gradient(to right, #276f47, #5f9c45);"><i class="fa fa-money"></i>Economy<span class="beta">beta</span></div>
-            	</div>
-				-->
-			</div>
+            <div class="box-wrapper">
+                <div class="box">
+                    <div style="background-color: #232323;"><i class="fa fa-check" style="color: #b2ffb2;"></i>Easy to Use</div>
+                    <p>Aeon works right out of the box and does not need any configuration.</p>
+                </div>
+                
+                <div class="box">
+                    <div style="background-color: #232323;"><i class="fa fa-cogs" style="color: #c7c7ff;"></i>Efficient</div>
+                    <p>Aeon utilizes Discord's embed with simplicity in mind, used only where it is needed.</p>
+                </div>
+                
+                <div class="box">
+                    <div style="background-color: #232323;"><i class="fa fa-fire" style="color: #f5a0a0;"></i>Quick</div>
+                    <p>Aeon is blazing fast when it comes to responding to commands.</p>
+                </div>
+            </div>
             
-            <p class="center">...and much more!</p>
-			
-			<div style="text-align: center;">
-				<div id="statistics">
-					<h2><code>90+</code> Servers</h2>
-					<h2><code>22967+</code> Users</h2>
-				</div>
-			</div>
-			
+            <h1>Featured Categories</h1>
+            
+            <div class="box-wrapper">
+                <div class="box">
+                    <div style="background-image: linear-gradient(to right, #317cb1, #308092);"><i class="fa fa-wrench"></i>Utility</div>
+                    <p>Utilities such as <code>Google (Assistant)</code>, <code>Translator</code>, <code>Dictionary</code>, and more.</p>
+                    <br>
+                    <img src="showcase/google-assistant.png" alt="Google Assistant" title="Google Assistant">
+                </div>
+                
+                <div class="box">
+                    <div style="background-image: linear-gradient(to right, #7d6b3b, #8e765d);"><i class="fa fa-image"></i>Image Generation</div>
+                    <p>There are over <code>100</code> image generation commands to pick from.</p>
+                    <img src="showcase/fake-quote.png" alt="Fake Quote" title="Fake Quote">
+                    <img src="showcase/youtube-logo.png" alt="YouTube Logo" title="YouTube Logo">
+                </div>
+            </div>
+            
+            <div class="box-wrapper">
+                <div class="box">
+                    <div style="background-image: linear-gradient(to right, #5f6696, #394b61);"><i class="fa fa-code"></i>Development</div>
+                    <p>Development commands such as <code>DNS</code> and <code>IP</code> lookup, <code>Hastebin</code>, and <code>WHOIS</code>.</p>
+                    <img src="showcase/whois.png" alt="WHOIS" title="WHOIS">
+                </div>
+                
+                <div class="box">
+                    <div style="background-image: linear-gradient(to right, #a57f3a , #b1b12d);"><i class="fa fa-smile-o"></i>Fun</div>
+                    <p>Tons of commands such as <code>ASCII</code> and <code>Emojify</code> that were made for you to have fun in your server.</p>
+                     <img src="showcase/ascii.png" alt="ASCII" title="ASCII">
+                </div>
+            </div>
+            
+            <h1>Featured Commands</h1>
+            
+            <div class="box-wrapper">
+                <div class="box">
+                    <div style="background-color: #1ed760; color: #000;"><i class="fa fa-spotify"></i>Spotify</div>
+                    <p>You can get information on <code>songs</code>, <code>albums</code>, <code>artists</code>, <code>users</code>, and <code>member presences</code>. This command also generates <code>cards for songs and albums</code>.</p>
+                    <img src="showcase/spotify-member-card.png" alt="Spotify Member Card" title="Spotify Member Card">
+                </div>
+                
+                <div class="box">
+                    <div style="background-color: #d67ca9; color: #000;"><i class="fa fa-circle"></i>osu!</div>
+                    <p>Fetch <code>user statistics</code>, <code>recent/top/first place scores</code>, and <code>get ranking list</code>. Also generates <code>cards for users</code> and supports <code>member presences</code>.</p>
+                    <img src="showcase/osu-user-card.png" alt="osu! User Card" title="osu! User Card">
+                </div>
+            </div>
+            
+            <div class="box-wrapper">
+                <div class="box">
+                    <div style="background-color: #00aaff; color: #000;"><i class="fa fa-circle"></i>AniList</div>
+                    <p>Search for <code>anime</code>, <code>manga</code>, <code>characters</code>, <code>studios</code>, and more from AniList. <code>MyAnimeList</code> command is also included.</p>
+                    <img src="showcase/anilist-anime.png" alt="AniList Anime" title="AniList Anime">
+                </div>
+                
+                <div class="box">
+                    <div style="background-color: #377096; color: #fff;"><i class="fa fa-steam"></i>Steam</div>
+                    <p>View <code>user information and their games</code> and <code>search for games</code> from Steam.</p>
+                    <br>
+                    <img src="showcase/steam-user.png" alt="Steam User" title="Steam User">
+                </div>
+            </div>
+            
             <div class="center">
                 <a title="Invite" class="button" href="invite"><i class="fa fa-plus"></i>Invite Aeon</a>
             </div>
             
-			<h1>Support Aeon</h1>
-			
-			<ul id="support">
-				<li><a href="https://paypal.me/flazepe" target="_blank">PayPal</a></li>
-			</ul>
-			
+            <h1>Support Aeon</h1>
+            
+            <ul id="support">
+                <li><a href="https://paypal.me/flazepe" target="_blank">PayPal</a></li>
+            </ul>
+            
             <footer style="margin-top: 50px; margin-bottom: 50px;">
                 <small title="2020" style="font-size: 15px; color: #aaa;">&copy; flazepe</small>
             </footer>
         </div>
-		
-		<script>
-		const voteLinks = {
-			dbl: {
-				name: "Discord Bot List",
-				url: "https://top.gg/bot/635833307510079490/vote"
-			},
-			boats: {
-				name: "Discord Boats",
-				url: "https://discord.boats/bot/635833307510079490/vote"
-			},
-			bfd: {
-				name: "Bots for Discord",
-				url: "https://botsfordiscord.com/bot/635833307510079490/vote"
-			}
-		};
-		
-		const parameters = new URLSearchParams(window.location.search);
-		const botList = parameters.get("ref");
-		
-		if (voteLinks[botList]) document.querySelector("#support").innerHTML += `<li><a title="Vote" href="${voteLinks[botList].url}" target="_blank">Vote on ${voteLinks[botList].name}</a></li>`;
-		else document.querySelector("#support").innerHTML += Object.keys(voteLinks).map(x => `<li><a title="Vote" href="${voteLinks[x].url}" target="_blank">Vote on ${voteLinks[x].name}</a></li>`).join("");
-		</script>
+        
+        <script>
+        const voteLinks = {
+            dbl: {
+                name: "Discord Bot List",
+                url: "https://top.gg/bot/635833307510079490/vote"
+            },
+            boats: {
+                name: "Discord Boats",
+                url: "https://discord.boats/bot/635833307510079490/vote"
+            },
+            bfd: {
+                name: "Bots for Discord",
+                url: "https://botsfordiscord.com/bot/635833307510079490/vote"
+            }
+        };
+        
+        const parameters = new URLSearchParams(window.location.search);
+        const botList = parameters.get("ref");
+        
+        if (voteLinks[botList]) document.querySelector("#support").innerHTML += `<li><a title="Vote" href="${voteLinks[botList].url}" target="_blank">Vote on ${voteLinks[botList].name}</a></li>`;
+        else document.querySelector("#support").innerHTML += Object.keys(voteLinks).map(x => `<li><a title="Vote" href="${voteLinks[x].url}" target="_blank">Vote on ${voteLinks[x].name}</a></li>`).join("");
+        </script>
     </body>
 </html>
