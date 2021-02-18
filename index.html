@@ -182,15 +182,17 @@
             <div class="box-wrapper">
                 <div class="box">
                     <div style="background-color: #00aaff; color: #000;"><i class="fa fa-list"></i>AniList</div>
-                    <p>Search for <code>anime</code>, <code>manga</code>, <code>characters</code>, <code>studios</code>, and more from AniList. <code>MyAnimeList</code> command is also included.</p>
-                    <img src="showcase/anilist-anime.png" alt="AniList Anime" title="AniList Anime">
+                    <p>Search for <code>anime</code>, <code>manga</code>, <code>characters</code>, <code>studios</code>, and more from <code>AniList</code>. <code>MyAnimeList</code> command is also included.</p>
+					<img src="showcase/anilist-anime.png" alt="AniList Anime" title="AniList Anime">
+					<img src="showcase/anilist-character.png" alt="AniList Character" title="AniList Character">
                 </div>
                 
                 <div class="box">
                     <div style="background-color: #377096; color: #fff;"><i class="fa fa-steam"></i>Steam</div>
-                    <p>View <code>user information and their games</code> and <code>search for games</code> from Steam.</p>
+                    <p>View <code>user information and their games</code> and <code>search for games</code> from <code>Steam</code>.</p>
                     <br>
                     <img src="showcase/steam-user.png" alt="Steam User" title="Steam User">
+					<img src="showcase/steam-game.png" alt="Steam Game" title="Steam Game">
                 </div>
             </div>
             
@@ -226,10 +228,9 @@
         };
         
         const parameters = new URLSearchParams(window.location.search);
-        const botList = parameters.get("ref");
+        const botList = voteLinks[parameters.get("ref")];
         
-        if (voteLinks[botList]) document.querySelector("#support").innerHTML += `<li><a title="Vote" href="${voteLinks[botList].url}" target="_blank">Vote on ${voteLinks[botList].name}</a></li>`;
-        else document.querySelector("#support").innerHTML += Object.keys(voteLinks).map(x => `<li><a title="Vote" href="${voteLinks[x].url}" target="_blank">Vote on ${voteLinks[x].name}</a></li>`).join("");
+        document.querySelector("#support").innerHTML += botList ? `<li><a title="Vote" href="${botList.url}" target="_blank">Vote on ${botList.name}</a></li>` : Object.values(voteLinks).map(({ name, url }) => `<li><a title="Vote" href="${url}" target="_blank">Vote on ${name}</a></li>`).join("");
         </script>
     </body>
 </html>
